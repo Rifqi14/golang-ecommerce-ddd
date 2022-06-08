@@ -1,8 +1,6 @@
 package auth
 
 import (
-	"time"
-
 	"github.com/google/uuid"
 	"gorm.io/gorm"
 )
@@ -19,7 +17,7 @@ type UserSession struct {
 	LastIp           string    `gorm:"type:varchar(100);not null" json:"last_ip"`
 	State            bool      `gorm:"type:boolean;not null" json:"state"`
 	Platform         string    `json:"platform"`
-	CreatedAt        time.Time
-	UpdatedAt        time.Time
+	CreatedAt        int64
+	UpdatedAt        int64
 	DeletedAt        gorm.DeletedAt
 }

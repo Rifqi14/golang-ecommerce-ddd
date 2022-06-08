@@ -1,8 +1,6 @@
 package user
 
 import (
-	"time"
-
 	auth "github.com/Rifqi14/golang-ecommerce/app/domain/auth/model"
 	"github.com/google/uuid"
 	"gorm.io/gorm"
@@ -15,10 +13,10 @@ type User struct {
 	Phone        string    `gorm:"type:varchar(20)" json:"phone"`
 	PasswordHash string
 	PasswordSalt string
-	VerifiedAt   time.Time
+	VerifiedAt   int64
 	Status       string
-	CreatedAt    time.Time
-	UpdatedAt    time.Time
+	CreatedAt    int64
+	UpdatedAt    int64
 	DeletedAt    gorm.DeletedAt
 
 	// Relationship

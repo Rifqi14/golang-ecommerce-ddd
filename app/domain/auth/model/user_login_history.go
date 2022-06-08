@@ -1,8 +1,6 @@
 package auth
 
 import (
-	"time"
-
 	"github.com/google/uuid"
 	"gorm.io/gorm"
 )
@@ -14,7 +12,7 @@ type UserLoginHistory struct {
 	Platform  string    `json:"platform"`
 	Ip        string    `json:"ip"`
 	OS        string    `json:"os"`
-	CreatedAt time.Time
-	UpdatedAt time.Time
+	CreatedAt int64
+	UpdatedAt int64
 	DeletedAt gorm.DeletedAt
 }
