@@ -11,7 +11,7 @@ type IAuthenticationUsecase interface {
 
 	Register(req *authRequest.RegisterRequest) error
 
-	GetCurrentUser(email string) (res userVm.UserVm, err error)
+	GetCurrentUser() (res userVm.UserVm, err error)
 
 	Logout() (err error)
 

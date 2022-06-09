@@ -1,4 +1,4 @@
-package user
+package v1_repository
 
 import (
 	"strings"
